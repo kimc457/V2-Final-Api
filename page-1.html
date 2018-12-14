@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EDITORS LETTER</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+
+<body id="mainpage-ed">
+
+	<!-- <div id="headers">
+		<h1> <a href="index.html" > waves </a> </h1>
+		<h1 id="waves-second"> waves </a> </h1>
+		<h1 id="waves-third"> waves </a> </h1>
+	</div> -->
+	
+
+	<!-- <div id="heading"></div> -->
+	<div id="hover">
+	<a href="index.html">
+    <img src="assets/website-pngs/waves-magazine.png" 
+    onmouseover="this.src='assets/website-pngs/waves-magazine-korean.png'"
+    onmouseout="this.src='assets/website-pngs/waves-magazine.png'"
+    border="0" alt=""/></a>
+    </div>
+
+    
+
+	<!-- <h1> 웨이브즈 매거진 </h1> -->
+		
+		<!-- <p class="bar"> <a href="page-1.html" > story one </a> </p> -->
+	<div id="bar-box">
+		<ul class="bar">
+		  <li ><a id="red" href="page-1.html"> EDITOR'S LETTER </a></li>
+		  <li ><a  id="green" href="page-2.html"> WHAT IS A BTS? </a></li>
+		  <li ><a  id="orange" href="page-3.html"> EAST MEETS WEST </a></li>
+		  <li ><a  id="white" href="page-4.html"> THE WORLD TOUR </a></li>
+		  <li ><a  id="blue" href="page-5.html"> LOVE MYSELF CAMPAIGN </a></li>
+		</ul>
+	</div>
+		
+
+		<div id="arena"></div>
+		<div id="arena-2"></div>
+		<div id="arena-3"></div>
+
+		<p class="extra"> We hope you join the wave!</p>
+
+
+<!-- END OF THE HTML -->
+
+
+
+
+
+	<script type="text/javascript" src="assets/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+	
+	  var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		function onYouTubeIframeAPIReady() {
+
+	    // //$.get requests:
+	    // 	// are.na
+	    $.get( "http://api.are.na/v2/channels/waves-letter", function( data ) {
+	      
+
+	      var arenaContents = data.contents;
+
+	      console.log(arenaContents)
+
+	      for (var i = arenaContents.length - 1; i >= 0; i--) {
+	      	//arenaContents[i]
+
+	      	console.log(arenaContents[i], arenaContents[i].class)
+
+	      // 	if(arenaContents[i].image){
+	      // 		$("#arena").append(`
+
+	      // 			<img class="images" src="${arenaContents[i].image.original.url}">
+
+	      // 		`)
+
+	      // 	}else{
+	      // 		console.log("THIS IMAGE DOESNT EXIST", arenaContents.class)
+	      // 	}  
+
+
+	      // 	if(arenaContents[i].text){
+	      // 		$("#arena").append(`
+
+
+	      // 		`) 
+	      // }
+
+
+
+	      	if(arenaContents[i].class == "Image"){
+	      		// do somethign w. the image
+	      		var currentD = new Date();
+	      		var createdD = new Date(arenaContents[i].created_at);
+				// d.setDate(d.getDate()- 5);
+				// d.toLocaleString()
+				var timeElasped = (currentD - createdD)/1000;
+
+				var days = Math.floor(timeElasped / 86400);
+				timeElasped -= days * 86400;
+
+				console.log(days) 
+				if(days >= 0){
+					var story = arenaContents[i].description.slice(0,1)
+					console.log(story)
+					var appendthing = `
+		      			<div>
+		      			<img class="images" src="${arenaContents[i].image.original.url}">
+		      			<div>
+		      			<p class="description"   >  ${arenaContents[i].description.slice(1)}</p>
+		      			
+		      			
+		      			</div>
+		      			</div>
+		      		 `;
+		      		 if(story == '1'){
+		      		$("#arena").append(appendthing) }
+		      		else if(story == '2'){
+		      			$("#arena-2").append(appendthing);
+		      		}
+		      		else if(story == '3'){
+		      			$("#heading").append(appendthing);
+		      		}
+		      		else if(story == '4'){
+		      			$("#arena-3").append(appendthing);
+		      		}
+
+		      		// 
+		      		// console.log("THIS IS AN IMAGE", arenaContents[i].image.original.url)
+				}
+	      		// var date = new Date(arenaContents[i].created_at);
+				// console.log(date.toString().slice(4,10))
+				//minus day -- countdown
+				
+
+				// <p class="description" >  ${30 - days} days left</p>
+
+
+
+
+	      		//you can't have this code twice --> but this is where you pull all the different types of file names 
+	      	// } else if(arenaContents.class == "Pdf"){
+
+	      		
+
+	      	}else if(arenaContents[i].class == "Text"){
+	      		$("#arena").append(`
+
+	      				<div><p class="text"   >  ${arenaContents[i].content}</p></div>
+
+	      		 `) 
+	      		console.log("THIS IS TEXT", arenaContents[i].content)
+
+	      	}
+
+
+
+	      	else if(arenaContents[i].class == "Media"){
+	      		$("#arena").append('<div id="player"></div>') 
+	      		console.log("THIS IS A VIDEO", arenaContents[i].content)
+	      		
+	      		var vidId = arenaContents[i].source.url.slice(32)
+	      		console.log(vidId)
+
+	      		var currentD = new Date();
+	      		var createdD = new Date(arenaContents[i].created_at);
+				// d.setDate(d.getDate()- 5);
+				// d.toLocaleString()
+				var timeElasped = (currentD - createdD)/1000;
+
+				var days = Math.floor(timeElasped / 86400);
+				timeElasped -= days * 86400;
+			    $("#arena").append(`
+	      			
+	      			<div>
+	      			<p class="description"   >  ${arenaContents[i].description}</p>
+	      			
+	      			<p class="description" >  ${30 - days} days left to view</p>
+	      			</div>
+	      			
+	      		 `) 
+			      // 3. This function creates an <iframe> (and YouTube player)
+			      //    after the API code downloads.
+			      var player;
+			   
+
+			        player = new YT.Player('player', {
+			          height: '390',
+			          width: '640',
+			          videoId: vidId,
+			          events: {
+			            'onReady': onPlayerReady,
+			            'onStateChange': onPlayerStateChange
+			          }
+			        });
+			
+
+			      // 4. The API will call this function when the video player is ready.
+			      function onPlayerReady(event) {
+			        // event.target.playVideo();
+			      }
+
+			      // 5. The API calls this function when the player's state changes.
+			      //    The function indicates that when playing a video (state=1),
+			      //    the player should play for six seconds and then stop.
+			      var done = false;
+			      function onPlayerStateChange(event) {
+			        if (event.data == YT.PlayerState.PLAYING && !done) {
+			          setTimeout(stopVideo, 6000);
+			          done = true;
+			        }
+			      }
+			      function stopVideo() {
+			        player.stopVideo();
+			      }
+	      	}
+
+	      }
+
+
+
+
+
+	    });
+
+	    
+
+
+		}
+
+
+
+	</script>
+	<script type="text/javascript" src="assets/ScrollMagic.js"></script>
+	<script type="text/javascript" src="assets/plugins/debug.addIndicators.js"></script>
+</head>
+
+
+
+
+
+	<script>
+		$(function () { // wait for document ready
+			// init
+			var controller = new ScrollMagic.Controller({
+				globalSceneOptions: {
+					triggerHook: 'onLeave'
+				}
+			});
+
+			// get all slides
+			var slides = document.querySelectorAll("section.panel");
+
+			// create scene for every slide
+			for (var i=0; i<slides.length; i++) {
+				new ScrollMagic.Scene({
+						triggerElement: slides[i]
+					})
+					.setPin(slides[i])
+					.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+			}
+		});
+	
+	</script>
+</body>
+
+</html>
