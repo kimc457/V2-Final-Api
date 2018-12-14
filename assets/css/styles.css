@@ -1,0 +1,578 @@
+
+
+	img{
+		width:80%;
+	}
+
+	p{
+		/*color: yellow;*/
+		font-size: 20pt;
+	}
+
+	body{
+		font-family: sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		color: yellow;
+		/*padding-right: 1em;*/
+		/*padding-left: 1em;*/
+		padding-top: 0;
+		border:none;
+	}
+
+	div{
+		display: inline-block;
+		padding-bottom:20px;
+
+	}
+
+	.extra{
+		color: blue;
+		text-shadow: 2px 4px white;
+		font-size: 2em;
+		padding-top: 650px;
+		text-align: center;
+	}
+
+	.extra-home{
+		color: blue;
+		text-shadow: 2px 4px white;
+		font-size: 5em;
+		padding-top: 350px;
+		text-align: center;
+	}
+
+
+/* --> STYLING FOR THE IMAGES FROM ARENA*/
+	.images{
+		width: 100%;
+		/*height: 100%;*/
+		/*display: inline-block;
+		vertical-align: top;*/
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+	}
+
+/* --> STYLING FOR THE TEXT FROM ARENA*/
+	.text{
+		/*width:300px;
+		height: 300px;
+		display: inline-block;
+		vertical-align: top;*/
+		font-size: 18pt;
+		color: white;
+		text-align: center;
+	}
+
+	.media{
+		position: relative;
+		margin: auto;
+	}
+
+/* --> COLORS FOR THE TOP LINKS INDEX TOP RIGHT OF PG*/
+	#red{
+		color: red;
+		text-shadow: 2px 4px cyan;
+	}
+
+	#green{
+		color: green;
+		text-shadow: 2px 4px pink;
+	}
+
+	#orange{
+		color: orange;
+		text-shadow: 2px 4px purple;
+	}
+
+	#white{
+		color: white;
+		text-shadow: 2px 4px red;
+	}
+
+	#blue{
+		color: blue;
+		text-shadow: 2px 4px white;
+	}
+
+/*this is for the top nav bar*/
+	.bar{ 
+		text-align: right;
+		right:0;
+		font-size: 3em;
+		font-color: white;
+		display: block;
+	}
+	
+
+	#bar-box{
+		width:60vw;
+		height: 30vw;
+		padding-top: 15px;
+		border:none;
+		top:15px;
+		right:20px;
+		font: 3em;
+		margin-top: 0;
+		text-align: right;
+		position: absolute;
+	}
+
+				@media only screen and (max-width: 60vw) {
+			  #bar-box { 
+			    width: 100%; 
+			  }
+
+			  .bar{
+			  	font-size: 3em;
+			  }
+			 
+			}
+
+			@media only screen and (max-width: 800px) {
+			  #bar-box { 
+			    width: 50%; 
+			  }
+			  .bar{
+			  	font-size: 2em;
+			  }
+			 
+			}
+
+			@media only screen and (max-width: 500px) {
+			  #bar-box { 
+			    width: 30%; 
+			  }
+			  .bar{
+			  	font-size: 1.5em;
+			  }
+			  
+			}
+
+
+
+			/*@media only screen and (max-width: 800px) {
+			  h1 { 
+			    width: 100%; 
+			  }}
+
+
+			@media only screen and (max-width: 800px) {
+			  body {background-color: red; }
+			}*/
+
+
+/* --> TOP LOGO THAT CHANGES ON HOVER DIV*/
+	#hover{
+		width:40vw;
+		height:10vw;
+		top:0;
+		left:0;
+		margin-left: 0;
+		margin-top:0.5em;
+		display:block;
+		padding: 10px;
+		position:relative;
+	}
+
+
+
+/* --> BODIES FOR THE DIFFERENT HTML PAGES*/
+	#mainpage{
+		background-image: linear-gradient(rgb(96, 211, 235),rgb(56, 240, 0));
+		border:none;
+		margin-top: 0;
+		padding: 10px;
+		margin: 10px;
+		
+	}
+
+	#mainpage-ed{
+		background-color: black;
+		border:none;
+		padding: 10px;
+		margin: 10px;
+	}
+	#mainpage-bts{
+		background-image: linear-gradient(rgb(172, 74, 196)
+,rgb(196, 52, 23));
+		border:none;
+		margin-top: 0;
+		padding: 10px;
+		margin: 10px;
+	}
+	#mainpage-east{
+		background-color: black;
+		border:none;
+		margin-top: 0;
+		padding: 10px;
+		margin: 10px;
+	}
+	#mainpage-tour{
+		background-image: linear-gradient(rgb(249, 135, 4),rgb(249, 240, 3));
+		border:none;
+		margin-top: 0;
+		padding: 10px;
+		margin: 10px;
+	}
+	#mainpage-ly{
+		background-color: black;
+		border:none;
+		margin-top: 0;
+		padding: 10px;
+		margin: 10px;
+	}
+
+
+
+
+
+
+
+	
+
+
+	/*DIV FOR THE WAVES HEADER*/
+	#heading{
+		width: 80vw;
+		height: 40vh;
+		top:0;
+		margin:auto;
+		display: block;
+		padding-top:0;
+		margin-top:0;
+	}
+
+/*-->DIVS FOR THE ARENA THINGS TO ATTACH TO*/
+
+
+	#cover{
+		width: 80vw;
+		height: auto;
+		padding-top:7em;
+		position: relative;
+		display: block;
+		left:0;
+		top:0;
+	}
+
+
+	#arena{
+		width: 60vw;
+		height: auto;
+		top-margin: 2em;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+
+
+
+	#arena-2{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+		z-index: 5;
+
+	}
+
+	#arena-3{
+		width: 60vw;
+		height: auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+
+	}
+
+	#arena-4{
+		width: 60vw;
+		height:auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+
+	}
+	#arena-5{
+		width: 60vw;
+		height: auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+
+	}
+	#arena-6{
+		width: 60vw;
+		height: auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+
+	}
+	#arena-7{
+		width: 60vw;
+		height: auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events:auto;
+
+	}
+	#arena-8{
+		width: 60vw;
+		height: auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+
+	}
+	#arena-9{
+		width: 60vw;
+		height: auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+
+	}
+	#arena-10{
+		width: 60vw;
+		height: auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+
+	}
+	#arena-11{
+		width: 60vw;
+		height: auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-12{
+		width: 60vw;
+		height: auto;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-13{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-14{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-15{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-16{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-17{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-18{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-19{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-20{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+	}
+	#arena-21{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+		z-index: 5;
+	}
+	#arena-22{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+		z-index: 5;
+	}
+	#arena-23{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+		z-index: 5;
+	}
+	#arena-24{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+		z-index: 5;
+	}
+	
+#arena-25{
+		width: 60vw;
+		height: 80vh;
+		padding-top: 200px;
+		margin: auto;
+		position: relative;
+		display: block;
+		pointer-events: auto;
+		z-index: 5;
+	}
+
+
+
+	/*#marquee{
+		width: 250px;
+		height: 350px;
+		display: inline-block;
+		position: fixed;
+		right: 20px;
+		margin-top: 300px;
+		color: white;
+		font-size: 1.5em;
+
+	}*/
+
+	#marquee{
+		width: 100vw;
+		height: 50px;
+		display: inline-block;
+		position: fixed;
+		top:10px;
+		color: white;
+		font-size: 1em;
+
+	}
+
+
+/*HOVER LINK STYLING*/
+	a:link {
+    color: yellow;
+    text-decoration: none;
+	}
+
+
+	a:visited {
+	color: yellow;
+	text-decoration: none;
+	}
+
+
+	a:hover {
+	color: white;
+	text-decoration: none;
+	}
+
+
+	a:active {
+	color: yellow;
+	text-decoration: none;
+	}
+
+	ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+	}
+
+	li {
+    display: inline;
+    margin-top: 0;
+
+	}
+
+	li a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
